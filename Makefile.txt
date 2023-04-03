@@ -1,0 +1,2 @@
+advcalc:
+	gcc main.c -o advcalc
