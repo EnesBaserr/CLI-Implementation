@@ -1,20 +1,20 @@
 # InterpreterImplementation
 Advanced calculator interpreter having various operations using C language.
 
-                 INTERPRETER IN C
-
-ENES BASER                            YASIN ATLI
+INTERPRETER IN C
 
 
-	SECTIONS :
-	  1) INTRODUCTION
-	  2) GENERAL PURPOSE
-	  3) DESIGN AND IMPLEMENTATION DETAILS 
-	  4) PROBLEMS ENCOUNTERED 
-	  5) SAMPLE I/O
 
-    INTRODUCTION:
-      This documentation describes the use of accompanying C code
+
+# SECTIONS :
+1) INTRODUCTION
+2) GENERAL PURPOSE
+3) DESIGN AND IMPLEMENTATION DETAILS 
+4) PROBLEMS ENCOUNTERED 
+5) SAMPLE I/O
+
+# INTRODUCTION:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This documentation describes the use of accompanying C code
 that implements the methods described in main.c .Makefile is provided
 ,one who want to test can give a promp to console "make" and create executable
 named avcalc.
@@ -25,8 +25,8 @@ make MakeFile
 .
 
 
-    GENERAL PURPOSE: 
-      It is actually language implementation compatible with console.
+# GENERAL PURPOSE: 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It is actually language implementation compatible with console.
 Interpreter take input as infix expression from user and evaluate its
 value and also handling some error cases. Infix expressions include
 various operations :
@@ -47,8 +47,8 @@ included in evaluation process.
 
 
 
-   DESIGN AND IMPLEMENTATION DETAILS:
-     Given implementation used fgets method and reads the user
+# DESIGN AND IMPLEMENTATION DETAILS:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Given implementation used fgets method and reads the user
 
 input untill terminator command encountered.(Ctrl-D→ EOF in Unix
 
@@ -71,7 +71,7 @@ rs and / -> lr etc. Then, we push them into the stack to determine the
 
 correct order of final postfix.
 
-     After settling postfix array, postfix array is sent to evalPost()
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After settling postfix array, postfix array is sent to evalPost()
 
 method which printing result. It is important to mention that in this
 
@@ -89,14 +89,14 @@ and push them into evalStack. It continious like this way and we print
 
 evalStack top element which is our correct result.
 
-     String or char variables are stores in Hashmap struct. Hash
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String or char variables are stored in Hashmap struct. Hash
 
 (index) calculation is provided with implementation. So if key is
 
 already exist, it will be overwrited.Otherwise, new value will be
 
 stored in correct position of corresponding key.
-     Implementation also provides error checking.Firstly, basic
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Implementation also provides error checking.Firstly, basic
 
 stack(balanceStack) used in form of array to throw an error statement
 
@@ -106,7 +106,7 @@ be pushed to the stack. But, if char equals ‘)’ then peek of stack
 
 should be pop. In the end if there is inbalance throw an error.
 
-     We identified integers, variables,operators, paranthesis and
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We identified integers, variables,operators, paranthesis and
 
 functions as distinc integer values:
 
@@ -128,8 +128,8 @@ or char was integer and current char matches with opened p. (2 (…))
 
 Which is not possible case so the code will throw an error.
 
-   PROBLEMS ENCOUNTERED 
-     When dealing with error handling,(For example 1++2 or 1 2 -3)
+# PROBLEMS ENCOUNTERED 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When dealing with error handling,(For example 1++2 or 1 2 -3)
 
 we tried to approach in many ways. But, they are not efficient as
 
@@ -140,7 +140,7 @@ is assigning values for different type of chars or strings as we
 mentioned above.
 
 
-     Also, it is important to mention that Token struct can be used in
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Also, it is important to mention that Token struct can be used in
 
 implementation and it can have char value and Token type like
 
@@ -150,25 +150,25 @@ information in array and prefer to store them as char values.
 
 
 
-SAMPLE I/O
+# SAMPLE I/O
 
->x=2
+&nbsp;&nbsp;&nbsp; > x=2
 
->x*2
+&nbsp;&nbsp;&nbsp;> x*2
 
-4
+&nbsp;&nbsp;4
 
-> y = x - 4 * (x + x)
-> y = -12
+&nbsp;&nbsp;&nbsp;> y = x - 4 * (x + x)
+&nbsp;&nbsp;&nbsp;> y = -12
 
->(((x) //Paranthesis Imbalance
+&nbsp;&nbsp;&nbsp;(((x) //Paranthesis Imbalance
 
-Error!
+&nbsp;&nbsp;Error!
 
->x+y+1*-1
+&nbsp;&nbsp;&nbsp;> x+y+1*-1
 
-Error! //Two operator next to each other which is not possible in this
+&nbsp;&nbsp;Error! //Two operator next to each other which is not possible in this
 
 language, they are defined unary operator.
 
-> <Ctrl-D>
+&nbsp;&nbsp;&nbsp;<Ctrl-D>
