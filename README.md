@@ -31,18 +31,29 @@ make MakeFile
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It is actually language implementation compatible with console.
 Interpreter take input as infix expression from user and evaluate its
 value and also handling some error cases. Infix expressions include
-various operations :
-A+B →Returns summation of A and B
-A*B → Returns multiplication of A and B
-A-B → Returns substraction of A and B
+various operations :   
+
+A+B →Returns summation of A and B  
+
+A*B → Returns multiplication of A and B  
+
+A-B → Returns substraction of A and B   
+
 A&B → Returns bitwise A and B
-A|B → Returns bitwise A or B
-Xor(A,B) → Returns bitwise A xor B.
-Ls(A,B) → Returns the result of A shifted B bits to the left.
-Rs(A,B) → Returns the result of A shifted B bits to the right.
-Lr(A,B) → Returns result of A rotated B times to the left.
-Rr(A,B) → Returns the result of A rotated B times to the right.
-Not(A)→Return bitwise complement of A.
+A|B → Returns bitwise A or B  
+
+Xor(A,B) → Returns bitwise A xor B.  
+
+Ls(A,B) → Returns the result of A shifted B bits to the left.  
+
+Rs(A,B) → Returns the result of A shifted B bits to the right.  
+
+Lr(A,B) → Returns result of A rotated B times to the left.  
+
+Rr(A,B) → Returns the result of A rotated B times to the right.  
+
+Not(A)→Return bitwise complement of A.  
+
 Also <CTRL-D> is used for terminated interpreter screen. And also in
 this language ‘%’ is used for command lines. They should not be
 included in evaluation process.
@@ -174,3 +185,4 @@ information in array and prefer to store them as char values.
 language, they are defined unary operator.
 
 &nbsp;&nbsp;&nbsp;<Ctrl-D>
+You can check Description provided for further clarification.
